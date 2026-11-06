@@ -63,6 +63,8 @@ Add a short interpretation (4 to 6 sentences) to this README or a `RESULT.md`:
 - Which queries did semantic search win, and what do those have in common?
 - One sentence on why a team would still keep the weaker system around (hint: the two systems win on different queries).
 
+Semantic search performs better overall, with both higher MRR (0.67 vs. 0.30) and higher Recall@10 (1.00 vs. 0.60). Keyword search ranks the exact-match queries “redis or memcached for caching” and “sql or nosql for a new product” higher; both explicitly name the alternatives being compared. Semantic search ranks the other eight queries higher, including paraphrased questions about cache behavior, indexing, and system operations. Those queries express concepts in natural language rather than using only the exact terms in a post title. A team could keep keyword search as a complementary option because it can perform especially well when a query uses exact names or terminology.
+
 ## Take it further (optional)
 
 If you have a working Postgres with the posts loaded and embeddings generated, swap `search-results.json` for real searches:
